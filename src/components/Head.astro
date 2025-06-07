@@ -1,0 +1,30 @@
+---
+import { ClientRouter } from 'astro:transitions'
+import { SITE } from '@/site.config.ts'
+
+const isProd = import.meta.env.PROD
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content={SITE.title} />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="alternate" type="application/rss+xml" title={SITE.title} href={new URL('rss.xml', Astro.site)} />
+
+<ClientRouter />
+
+{
+  isProd &&
+    // Add your production-only meta tags here
+    console.log('Production mode')
+}
+
+{
+  !isProd &&
+    // Add your development-only meta tags here
+    console.log('Development mode')
+}

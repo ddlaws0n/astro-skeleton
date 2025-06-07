@@ -1,0 +1,93 @@
+---
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+
+import Logo from '@/assets/astro-skeleton.png'
+const { title = 'Astro Skeleton' } = Astro.props
+---
+
+<header class="bg-white border-b border-stone-200 sticky top-0 z-50">
+  <div class="container mx-auto px-4">
+    <nav class="flex justify-between items-center py-4">
+      <!-- Logo and Title -->
+      <a href="/" class="flex items-center gap-3 group">
+        <Image src={Logo} alt="Astro Skeleton" class="h-8 w-8 transition-transform group-hover:scale-105" />
+        <span class="text-xl font-bold text-stone-900 font-heading">{title}</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex items-center space-x-8">
+        <li>
+          <a href="/" class="text-stone-700 hover:text-stone-900 font-medium transition-colors"> Home </a>
+        </li>
+
+        <li>
+          <a href="/blog" class="text-stone-700 hover:text-stone-900 font-medium transition-colors"> Blog </a>
+        </li>
+
+        <li>
+          <a href="/about" class="text-stone-700 hover:text-stone-900 font-medium transition-colors"> About </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/yourusername/astro-skeleton"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-stone-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-stone-800 transition-colors">
+            <Icon name="solar:code-bold" class="w-4 h-4" />
+            Get Started
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button
+        class="md:hidden p-2 text-stone-700 hover:text-stone-900 transition-colors"
+        id="mobile-menu-button"
+        aria-label="Toggle menu">
+        <Icon name="solar:hamburger-menu-bold" class="w-6 h-6" />
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="py-4 border-t border-stone-200">
+        <ul class="space-y-3">
+          <li>
+            <a href="/" class="block py-2 text-stone-700 hover:text-stone-900 font-medium transition-colors"> Home </a>
+          </li>
+
+          <li>
+            <a href="/blog" class="block py-2 text-stone-700 hover:text-stone-900 font-medium transition-colors"> Blog </a>
+          </li>
+
+          <li>
+            <a href="/about" class="block py-2 text-stone-700 hover:text-stone-900 font-medium transition-colors">
+              About
+            </a>
+          </li>
+          <li class="pt-2">
+            <a
+              href="https://github.com/yourusername/astro-skeleton"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-stone-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-stone-800 transition-colors">
+              <Icon name="solar:code-bold" class="w-4 h-4" />
+              Get Started
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button')
+  const mobileMenu = document.getElementById('mobile-menu')
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden')
+  })
+</script>

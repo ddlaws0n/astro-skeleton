@@ -1,0 +1,91 @@
+{
+  "name": "astro-skeleton",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A modern, opinionated Astro starter template with SEO, performance, and ease-of-use in mind",
+  "keywords": [
+    "astro",
+    "starter",
+    "template",
+    "ssg",
+    "static-site",
+    "seo",
+    "performance"
+  ],
+  "author": {
+    "name": "David D Lawson",
+    "email": "david@lawson.dev",
+    "url": "https://ddlawson.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddlaws0n/astro-skeleton"
+  },
+  "bugs": {
+    "url": "https://github.com/ddlaws0n/astro-skeleton/issues"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "sync": "astro sync",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "check": "pnpm run check:astro && pnpm run check:types && pnpm run check:biome",
+    "check:astro": "astro check",
+    "check:types": "tsc --noEmit",
+    "check:biome": "biome check .",
+    "format": "biome format --write .",
+    "format:check": "biome format --write --check .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --fix .",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "clean": "rimraf -I -- .astro dist node_modules/.vite pnpm-lock.yaml",
+    "coverage": "vitest --coverage",
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "@astrojs/partytown": "^2.1.4",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.4.0",
+    "@iconify-json/solar": "^1.2.2",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.8",
+    "astro": "^5.8.1",
+    "astro-icon": "^1.1.5",
+    "astro-seo-meta": "^5.1.0",
+    "tailwindcss": "^4.1.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@biomejs/biome": "1.9.4",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.3",
+    "@types/node": "^22.15.29",
+    "astro-page-insight": "^0.10.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
+    "rimraf": "^6.0.1",
+    "semantic-release": "^24.2.5",
+    "sharp": "^0.34.2",
+    "sonda": "^0.7.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,astro}": [
+      "biome format --write",
+      "biome check --apply"
+    ]
+  },
+  "packageManager": "pnpm@10.8.0"
+}

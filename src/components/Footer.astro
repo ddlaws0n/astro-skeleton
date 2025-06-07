@@ -1,0 +1,120 @@
+---
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+
+import Logo from '@/assets/astro-skeleton.png'
+
+const currentYear = new Date().getFullYear()
+---
+
+<footer class="bg-white border-t border-stone-200 mt-20">
+  <div class="container mx-auto px-4">
+    <!-- Main Footer Content -->
+    <div class="py-12 grid md:grid-cols-4 gap-8">
+      <!-- Brand Section -->
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <Image src={Logo} alt="Astro Skeleton" class="h-8 w-8" />
+          <span class="text-xl font-bold text-stone-900 font-heading">Astro Skeleton</span>
+        </div>
+        <p class="text-stone-700 leading-relaxed max-w-md mb-6">
+          A minimal, modern starter template for building fast, content-focused websites with Astro. Built for
+          developers who value simplicity and performance.
+        </p>
+        <div class="flex gap-4">
+          <a
+            href="https://github.com/yourusername/astro-skeleton"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-stone-400 hover:text-stone-700 transition-colors"
+            aria-label="GitHub">
+            <Icon name="github" class="w-5 h-5" />
+          </a>
+          <a href="/rss.xml" class="text-stone-400 hover:text-stone-700 transition-colors" aria-label="RSS Feed">
+            <Icon name="rss" class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold text-stone-900 mb-4 font-heading">Quick Links</h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="/" class="text-stone-700 hover:text-stone-900 transition-colors"> Home </a>
+          </li>
+          <li>
+            <a href="/about" class="text-stone-700 hover:text-stone-900 transition-colors"> About </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.astro.build"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-stone-700 hover:text-stone-900 transition-colors">
+              Documentation
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="font-semibold text-stone-900 mb-4 font-heading">Resources</h3>
+        <ul class="space-y-3">
+          <li>
+            <a
+              href="https://github.com/yourusername/astro-skeleton"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-stone-700 hover:text-stone-900 transition-colors">
+              Source Code
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://astro.build"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-stone-700 hover:text-stone-900 transition-colors">
+              Astro Framework
+            </a>
+          </li>
+          <li>
+            <a href="/changelog" class="text-stone-700 hover:text-stone-900 transition-colors"> Changelog </a>
+          </li>
+          <li>
+            <a href="/contributing" class="text-stone-700 hover:text-stone-900 transition-colors"> Contributing </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="py-6 border-t border-stone-200">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-stone-500 text-sm">
+          © {currentYear} Astro Skeleton. Built with
+          <a
+            href="https://astro.build"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-teal-700 hover:text-teal-800 transition-colors">
+            Astro
+          </a>
+        </p>
+        <div class="flex gap-6">
+          <a href="/privacy-policy" class="text-sm text-stone-500 hover:text-stone-700 transition-colors">
+            Privacy Policy
+          </a>
+          <a href="/terms-of-service" class="text-sm text-stone-500 hover:text-stone-700 transition-colors">
+            Terms of Service
+          </a>
+          <a href="/sitemap-index.xml" class="text-sm text-stone-500 hover:text-stone-700 transition-colors">
+            Sitemap
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

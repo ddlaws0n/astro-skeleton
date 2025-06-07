@@ -1,0 +1,21 @@
+---
+import Layout from './Layout.astro'
+
+// Access frontmatter data via Astro.props
+const { frontmatter } = Astro.props
+
+// Extract title and description from frontmatter
+const title = frontmatter.title
+const description = frontmatter.description
+---
+
+<Layout title={title} description={description} icon="/favicon.svg">
+  <div class="container mx-auto px-4 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-semibold tracking-tight text-pretty text-stone-900 sm:text-5xl">{title}</h1>
+      <div class="prose prose-indigo max-w-none">
+        <slot />
+      </div>
+    </div>
+  </div>
+</Layout>
