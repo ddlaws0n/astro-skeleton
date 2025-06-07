@@ -1,34 +1,34 @@
 ---
-import { getCollection } from 'astro:content'
-import type { CollectionEntry } from 'astro:content'
-import Layout from '@/layouts/Layout.astro'
-import { formatDate } from '@/utils/date'
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import { formatDate } from "@/utils/date";
 
 // Define the blog entry type
-type BlogEntry = CollectionEntry<'blog'>
+type BlogEntry = CollectionEntry<"blog">;
 
 // Generate static paths for all blog entries
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog')
+  const blogEntries = await getCollection("blog");
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
-  }))
+  }));
 }
 
 // Define the props interface
 interface Props {
-  entry: BlogEntry
+  entry: BlogEntry;
 }
 
 // Get the entry from props
-const { entry } = Astro.props as Props
+const { entry } = Astro.props as Props;
 
 // Render the MDX content
-const { Content } = await entry.render()
+const { Content } = await entry.render();
 
 // Extract metadata from the blog post
-const { title, description, pubDate, updatedDate } = entry.data
+const { title, description, pubDate, updatedDate } = entry.data;
 ---
 
 <Layout title={title} description={description}>

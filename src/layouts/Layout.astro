@@ -1,21 +1,21 @@
 ---
-import '@/assets/tailwind.css'
-import Header from '@/components/Header.astro'
-import Footer from '@/components/Footer.astro'
-import { Seo } from 'astro-seo-meta'
-import Head from '@/components/Head.astro'
+import "@/assets/tailwind.css";
+import Footer from "@/components/Footer.astro";
+import Head from "@/components/Head.astro";
+import Header from "@/components/Header.astro";
+import { Seo } from "astro-seo-meta";
 
 interface Props {
-  title?: string
-  description?: string
-  icon?: string
+  title?: string;
+  description?: string;
+  icon?: string;
 }
 
 const {
-  title = 'Astro Skeleton',
-  description = 'A modern, opinionated Astro starter template with SEO, performance, and DevEx in mind',
-  icon = '/favicon.svg',
-} = Astro.props as Props
+  title = "Astro Skeleton",
+  description = "A modern, opinionated Astro starter template with SEO, performance, and DevEx in mind",
+  icon = "/favicon.svg",
+} = Astro.props as Props;
 ---
 
 <!doctype html>

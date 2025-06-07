@@ -1,12 +1,12 @@
 ---
-import Layout from './Layout.astro'
+import Layout from "./Layout.astro";
 
 // Access frontmatter data via Astro.props
-const { frontmatter } = Astro.props
+const { frontmatter } = Astro.props;
 
 // Extract title and description from frontmatter
-const title = frontmatter.title
-const description = frontmatter.description
+const title = frontmatter.title;
+const description = frontmatter.description;
 ---
 
 <Layout title={title} description={description} icon="/favicon.svg">
