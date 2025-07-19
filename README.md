@@ -21,7 +21,7 @@ pnpm create astro@latest -- --template @ddlaws0n/astro-skeleton
   - [Biome](https://biomejs.dev/) for fast linting and formatting
   - [TypeScript](https://www.typescriptlang.org/) for type safety
   - [Astro Check](https://docs.astro.build/en/reference/cli-reference/#astro-check) for Astro-specific checks
-- 🔄 **Git Hooks** - Using Husky and lint-staged for clean commits
+- 🔄 **Git Hooks** - Using lint-staged for clean commits
 - 📦 **Semantic Release** - Automated versioning and changelogs
 
 ## 📂 Project Structure
@@ -46,7 +46,6 @@ Inside of your Astro Skeleton project, you'll see the following folders and file
 ├── .env.example          # Example environment variables
 ├── astro.config.mjs      # Astro configuration
 ├── package.json          # Project dependencies and scripts
-├── tailwind.config.mjs   # Tailwind CSS configuration
 └── tsconfig.json         # TypeScript configuration
 ```
 
