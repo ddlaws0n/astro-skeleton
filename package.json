@@ -40,7 +40,7 @@
     "check:types": "tsc --noEmit",
     "check:biome": "biome check .",
     "format": "biome format --write .",
-    "format:check": "biome format --check .",
+    "format:check": "biome check . --formatter-enabled=true --linter-enabled=false",
     "lint": "biome lint .",
     "lint:fix": "biome lint --fix .",
     "test": "vitest",
@@ -53,15 +53,15 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.4",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.4.0",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.4.1",
     "@iconify-json/solar": "^1.2.2",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.8",
-    "astro": "^5.8.1",
+    "@tailwindcss/vite": "^4.1.11",
+    "astro": "^5.12.0",
     "astro-icon": "^1.1.5",
     "astro-seo-meta": "^5.1.0",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
@@ -69,16 +69,16 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.3",
-    "@types/node": "^22.15.29",
+    "@types/node": "^22.16.5",
     "astro-page-insight": "^0.10.2",
-    "lint-staged": "^16.1.0",
+    "lint-staged": "^16.1.2",
     "rimraf": "^6.0.1",
-    "semantic-release": "^24.2.5",
-    "sharp": "^0.34.2",
+    "semantic-release": "^24.2.7",
+    "sharp": "^0.34.3",
     "sonda": "^0.7.1",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
-    "vitest": "^3.1.4"
+    "vitest": "^3.2.4"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,astro}": [
