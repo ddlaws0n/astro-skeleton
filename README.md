@@ -1,5 +1,20 @@
 # 🚀 Astro Skeleton Starter Kit
 
+<div align="center">
+  <img src="src/assets/astro-skeleton.png" alt="Astro Skeleton Logo" width="200" />
+  <p>
+    <a href="https://github.com/ddlaws0n/astro-skeleton/stargazers">
+      <img alt="GitHub stars" src="https://img.shields.io/github/stars/ddlaws0n/astro-skeleton.svg" />
+    </a>
+    <a href="https://github.com/ddlaws0n/astro-skeleton/blob/main/LICENSE">
+      <img alt="License" src="https://img.shields.io/github/license/ddlaws0n/astro-skeleton.svg" />
+    </a>
+    <a href="https://astro.build">
+      <img alt="made with Astro" src="https://img.shields.io/badge/made%20with-Astro-black?logo=astro&logoColor=white" />
+    </a>
+  </p>
+</div>
+
 A modern, opinionated Astro starter template with SEO, performance, and ease-of-use in mind.
 
 ```sh
@@ -21,7 +36,7 @@ pnpm create astro@latest -- --template @ddlaws0n/astro-skeleton
   - [Biome](https://biomejs.dev/) for fast linting and formatting
   - [TypeScript](https://www.typescriptlang.org/) for type safety
   - [Astro Check](https://docs.astro.build/en/reference/cli-reference/#astro-check) for Astro-specific checks
-- 🔄 **Git Hooks** - Using Husky and lint-staged for clean commits
+- 🔄 **Git Hooks** - Using lint-staged for clean commits
 - 📦 **Semantic Release** - Automated versioning and changelogs
 
 ## 📂 Project Structure
@@ -46,7 +61,6 @@ Inside of your Astro Skeleton project, you'll see the following folders and file
 ├── .env.example          # Example environment variables
 ├── astro.config.mjs      # Astro configuration
 ├── package.json          # Project dependencies and scripts
-├── tailwind.config.mjs   # Tailwind CSS configuration
 └── tsconfig.json         # TypeScript configuration
 ```
 
