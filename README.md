@@ -1,5 +1,20 @@
 # 🚀 Astro Skeleton Starter Kit
 
+<div align="center">
+  <img src="src/assets/astro-skeleton.png" alt="Astro Skeleton Logo" width="200" />
+  <p>
+    <a href="https://github.com/ddlaws0n/astro-skeleton/stargazers">
+      <img alt="GitHub stars" src="https://img.shields.io/github/stars/ddlaws0n/astro-skeleton.svg" />
+    </a>
+    <a href="https://github.com/ddlaws0n/astro-skeleton/blob/main/LICENSE">
+      <img alt="License" src="https://img.shields.io/github/license/ddlaws0n/astro-skeleton.svg" />
+    </a>
+    <a href="https://astro.build">
+      <img alt="made with Astro" src="https://img.shields.io/badge/made%20with-Astro-black?logo=astro&logoColor=white" />
+    </a>
+  </p>
+</div>
+
 A modern, opinionated Astro starter template with SEO, performance, and ease-of-use in mind.
 
 ```sh
